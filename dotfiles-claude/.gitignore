@@ -1,0 +1,6 @@
+# Never track local-only or sensitive files
+.credentials.json
+settings.local.json
+backup-*/
+*.swp
+.DS_Store
