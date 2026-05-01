@@ -1,0 +1,37 @@
+# Codex CLI configuration
+#
+# Reference: https://developers.openai.com/codex/config-reference
+# Risk profile: read-only ops auto-allowed; writes inside workspace allowed;
+#               anything outside workspace prompts for approval.
+
+# Approval policy controls when Codex asks before running a command.
+# "on-request"  — Codex decides; usually safe ops auto, risky ops prompt
+# "untrusted"   — prompt for almost everything (more friction, more safety)
+# "never"       — never prompt (only with sandbox_mode = "danger-full-access")
+approval_policy = "on-request"
+
+# Sandbox mode controls what Codex can touch on your filesystem & network.
+# "read-only"           — read anywhere, no writes, no network
+# "workspace-write"     — read anywhere, write inside cwd workspace, no network
+# "danger-full-access"  — no sandbox; only with explicit user trust
+sandbox_mode = "workspace-write"
+
+# Default model. Uncomment and set after confirming your account has access.
+# model = "gpt-5.4"
+# model_reasoning_effort = "medium"
+
+# How much of each AGENTS.md file to load into the first turn.
+# project_doc_max_bytes = 16384
+
+# --- MCP servers (optional; mirror the Claude side as needed) ---
+# [mcp_servers.notion]
+# command = "npx"
+# args = ["-y", "@notionhq/notion-mcp-server"]
+# default_tools_approval_mode = "approve"
+#
+# [mcp_servers.notion.tools.search]
+# approval_mode = "approve"
+
+# --- Local-only overrides ---
+# Per-machine settings (model choice, env-specific MCP servers, secrets)
+# go in ~/.codex/config.local.toml — not tracked by this dotfiles repo.
