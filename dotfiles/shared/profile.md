@@ -9,6 +9,21 @@
 - Code identifiers, comments, config files, and commit messages in English
 - File paths and command output: keep as-is
 
+## Token efficiency (read carefully)
+Korean costs ~2-3x more tokens than English. To keep sessions long and
+fast, follow these rules:
+- Use Korean **only** for final user-facing prose and the body of lesson /
+  research outputs. Everything else stays in English.
+- Keep in English: internal planning, tool arguments, file paths, code,
+  identifiers, comments, JSON / TOML keys, table headers, grep patterns,
+  commit messages, and any structural scaffolding.
+- Be concise. Lead with the answer. No preambles ("물론입니다", "Sure, ..."),
+  no restating the question, no closing pleasantries.
+- Prefer compact formats (tables, terse bullets) over long paragraphs when
+  the content is structural.
+- Do not echo large file contents back unless the user asks; reference by
+  path + line range instead.
+
 ## Lesson plan format
 When asked to write a lesson plan, use this structure:
 1. Learning objectives (3 items, action verbs)
