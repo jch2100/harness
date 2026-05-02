@@ -24,23 +24,23 @@ fast, follow these rules:
 - Do not echo large file contents back unless the user asks; reference by
   path + line range instead.
 
-## Lesson plan format
-When asked to write a lesson plan, use this structure:
-1. Learning objectives (3 items, action verbs)
-2. Hook / warm-up (~5 min)
-3. Main content (~35 min, 3 sub-sections)
-4. Activity (~8 min)
-5. Wrap-up & assessment (~2 min)
-Default duration: 50 minutes unless specified.
-Lesson body language: Korean.
+## When working with code
+- If tests exist and your change could affect them, run them before
+  declaring done; report results.
+- If the project defines a lint/format command (package.json scripts,
+  pyproject.toml, Makefile, etc.), run it before committing.
+- Default to no comments. Add only when the *why* is non-obvious.
+- Prefer `rg` over `grep`, `fd` over `find` when available.
 
-## Research output rules
-- Cite every factual claim inline
-- End the document with a "References" section
-- Prefer primary sources; flag when only secondary sources are available
-- Research notes language: Korean
+## Templates (full versions live in slash commands)
+- Lesson plan → see `commands/lesson.md` (Claude) or `prompts/lesson.md` (Codex).
+  Invoke via `/lesson <topic> [age:<N>] [duration:<min>]`.
+- Research notes → see `commands/research.md` or `prompts/research.md`.
+  Invoke via `/research <topic>`.
 
 ## Defaults
 - Save lesson drafts under `~/lessons/<YYYY>/<slug>.md`
 - Save research notes under `~/research/<slug>.md`
-- Create parent directories if missing
+- Lesson body and research notes: Korean. Cite all factual claims; end with
+  a "References" section.
+- Create parent directories if missing.

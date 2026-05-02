@@ -4,7 +4,7 @@ argument-hint: <topic> [age:<N>] [duration:<min>]
 ---
 Generate a lesson plan for: $ARGUMENTS
 
-Follow the lesson-plan format defined in `~/.claude/CLAUDE.md`:
+Use this lesson-plan format:
 1. Learning objectives (3 items, action verbs)
 2. Hook / warm-up (~5 min)
 3. Main content (~35 min, 3 sub-sections)

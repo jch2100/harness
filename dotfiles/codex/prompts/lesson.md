@@ -5,7 +5,7 @@
 
 Generate a lesson plan for: $ARGUMENTS
 
-Follow the lesson-plan format defined in `~/.codex/AGENTS.md`:
+Use this lesson-plan format:
 1. Learning objectives (3 items, action verbs)
 2. Hook / warm-up (~5 min)
 3. Main content (~35 min, 3 sub-sections)
